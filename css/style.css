@@ -1,0 +1,78 @@
+
+.task {
+  display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 40px;
+}
+
+img {
+  height: 200px;
+  margin-right: 20px;
+}
+
+p {
+  text-align: center;
+  font-style: italic;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#categories {
+  display: flex;
+}
+.item{
+  list-style: none;
+  margin-right: 40px;
+}
+
+.t1{
+  background-color: LightCyan;
+}
+
+.t2{
+  background-color: cornsilk;
+}
+
+.t3{
+ background-color: PaleGreen;
+}
+
+.t4{
+  background-color: pink;
+}
+
+.t5{
+  background-color: LemonChiffon;
+}
+
+.t6{
+  background-color: PowderBlue;
+}
+
+.t7{
+  background-color: Silver;
+}
+
+.t8{
+  background-color: Coral;
+}
+
+
+#gallery {
+  display: flex;
+  list-style: none;
+}
+
+
+#validation-input {
+  border: 3px solid #bdbdbd;
+}
+
+#validation-input.valid {
+  border-color: #4caf50;
+}
+
+#validation-input.invalid {
+  border-color: #f44336;
+}
