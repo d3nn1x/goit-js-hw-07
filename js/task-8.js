@@ -32,7 +32,7 @@ for(let i =1; i<=amount; i+=1){
   divBoxEl.insertAdjacentHTML("beforeend",
   `<div style='width:${width +i*10}px; height:${height +i*10}px;
   background-color: rgb(${red}, ${green}, ${blue});
-  text-align: center;'>${i}</div>`)
+  '>${i}</div>`)
 }
 }
 
