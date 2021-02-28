@@ -3,20 +3,18 @@
 // li за одну операцию в список ul.ingredients. Для создания
 //  DOM-узлов используй document.createElement().
 
-const ingredients = [
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
-];
+const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"];
 
-const listEl = document.querySelector('#ingredients');
+const listEl = document.querySelector("#ingredients");
 
-ingredients.forEach((el)=>{
-  const itemEl = document.createElement('li');
-  itemEl.textContent = el
-  listEl.appendChild(itemEl);
-})
+const arr =[];
+
+const liEl=ingredients.map((el) => {
+  const itemEl = document.createElement("li");
+  itemEl.textContent = el;
+  arr.push(itemEl);
+});
+
+
+listEl.append(...arr);
 
