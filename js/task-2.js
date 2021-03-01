@@ -7,12 +7,11 @@ const ingredients = ["Картошка", "Грибы", "Чеснок", "Поми
 
 const listEl = document.querySelector("#ingredients");
 
-const arr =[];
 
-const liEl=ingredients.map((el) => {
+const arr = ingredients.map((el) => {
   const itemEl = document.createElement("li");
   itemEl.textContent = el;
-  arr.push(itemEl);
+  return itemEl
 });
 
 

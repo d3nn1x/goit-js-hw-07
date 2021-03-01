@@ -37,7 +37,7 @@ const listEl = document.querySelector('#gallery')
 
 const liEl=images.reduce((acc, {url, alt})=>{
 
- return acc += `<li><img src=${url} alt=${alt}></li>`
+ return acc + `<li><img src=${url} alt=${alt}></li>`
 
 },'');
 
