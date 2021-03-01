@@ -15,35 +15,41 @@
 // предыдущего на 10px
 // Создай функцию destroyBoxes(), которая очищает div#boxes.
 
-const inputValue = document.querySelector('#controls input');
+const inputValue = document.querySelector("#controls input");
 const renderBtnEl = document.querySelector('[data-action="render"]');
 const destroyBtnEl = document.querySelector('[data-action="destroy"]');
-const divBoxEl = document.querySelector('#boxes');
+const divBoxEl = document.querySelector("#boxes");
 
+let divEl = "";
+const createBoxes = function (amount) {
+  divEl='';
+  divBoxEl.innerHTML = ""
+  for (let i = 1; i <= amount; i += 1) {
+    let width = 30;
+    let height = 30;
+    let red = Math.round(Math.random() * 255);
+    let green = Math.round(Math.random() * 255);
+    let blue = Math.round(Math.random() * 255);
 
-const createBoxes = function(amount) {
-for(let i =1; i<=amount; i+=1){
-  let width =30;
-  let height=30;
-  let red = Math.round(Math.random() * 255);
-  let green = Math.round(Math.random() * 255);
-  let blue = Math.round(Math.random() * 255);
-
-  divBoxEl.insertAdjacentHTML("beforeend",
-  `<div style='width:${width +i*10}px; height:${height +i*10}px;
+    divEl += `<div style='width:${width + i * 10}px; height:${height + i * 10}px;
   background-color: rgb(${red}, ${green}, ${blue});
-  '>${i}</div>`)
+  '>${i}</div>`;
 }
-}
+divBoxEl.insertAdjacentHTML("beforeend", divEl);
+};
+
+
+
 
 const destroyBoxes = function () {
-  divBoxEl.innerHTML=''
-  inputValue.value=''
-}
+  divBoxEl.innerHTML = "";
+  inputValue.value = "";
+  divEl='';
+};
 
-const render = ()=>{
-  createBoxes(inputValue.value)
-}
+const render = () => {
+  createBoxes(inputValue.value);
+};
 
-renderBtnEl.addEventListener('click', render);
-destroyBtnEl.addEventListener('click', destroyBoxes )
+renderBtnEl.addEventListener("click", render);
+destroyBtnEl.addEventListener("click", destroyBoxes);
